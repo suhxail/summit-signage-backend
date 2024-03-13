@@ -31,6 +31,10 @@ app.use('/members',membersRoutes);
 
 app.use(express.static('uploads'));
 
+app.get("/", (req, res) => {
+    res.status(200).send("start");
+});
+
 // Routes
 
 // Connection
