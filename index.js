@@ -8,7 +8,7 @@ const scheduleRouter = require('./routes/scheduleRoutes');
 const playlistRoutes  = require('./routes/playlistRoute');
 const membersRoutes = require('./routes/AdmincreateduserRoute');
 const templateRouter = require('./routes/templateRoute');
-
+const mobilescreenRouter = require('./routes/mobilescreenRoute');
 
 
 // Mongo DB Connections
@@ -31,6 +31,8 @@ app.use('/schedule/',scheduleRouter);
 app.use('/playlist',playlistRoutes);
 app.use('/members',membersRoutes);
 app.use('/api/template', templateRouter)
+app.use('/api/mobilescreen', mobilescreenRouter)
+
 app.use(express.static('uploads'));
 
 app.get("/", (req, res) => {
